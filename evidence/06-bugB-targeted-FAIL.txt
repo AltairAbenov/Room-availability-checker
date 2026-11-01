@@ -1,0 +1,45 @@
+
+ RUN  v2.1.9 /home/project
+
+ ❯ src/availability.test.ts (14 tests | 1 failed | 12 skipped) 45ms
+   × AC5: result without changing booking data > AC5-2 does not modify the bookings array when the slot is free (BUG-B) 38ms
+     → expected [ { start: 600, end: 660 }, …(2) ] to deeply equal [ { start: 600, end: 660 }, …(1) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/availability.test.ts > AC5: result without changing booking data > AC5-2 does not modify the bookings array when the slot is free (BUG-B)
+AssertionError: expected [ { start: 600, end: 660 }, …(2) ] to deeply equal [ { start: 600, end: 660 }, …(1) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "end": 660,
+      "start": 600,
+    },
+    Object {
+      "end": 840,
+      "start": 780,
+    },
++   Object {
++     "end": 960,
++     "start": 900,
++   },
+  ]
+
+ ❯ eval src/availability.test.ts:79:27
+     77|     checkAvailability(room, NOW, 900, 960);
+     78|     expect(room.bookings).toBe(ref);
+     79|     expect(room.bookings).toEqual(before);
+       |                           ^
+     80|   });
+     81|   it('AC5-3 does not modify the bookings array when the slot is taken …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 12 skipped (14)
+   Start at  15:45:04
+   Duration  8.78s (transform 203ms, setup 0ms, collect 301ms, tests 45ms, environment 1ms, prepare 1.74s)
+

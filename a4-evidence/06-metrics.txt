@@ -1,0 +1,30 @@
+== a4-initial/src: 6 source files, 1 test files
+  App.tsx 229
+  availability.ts 66
+  data.ts 26
+  main.tsx 11
+  types.ts 17
+  utils.ts 8
+  availability.test.ts 88
+  time formatter definitions: 2
+  literal 1440 occurrences: 9
+  literal 120 (max duration) definitions: 1
+== src: 10 source files, 5 test files
+  App.tsx 98
+  components/BookingPanel.tsx 112
+  components/RoomDetails.tsx 67
+  components/RoomFilter.tsx 101
+  data/rooms.ts 49
+  domain/availability.ts 59
+  domain/filters.ts 20
+  domain/time.ts 14
+  main.tsx 11
+  types.ts 21
+  App.ui.test.tsx 37
+  catalog.integration.test.ts 28
+  domain/availability.test.ts 90
+  domain/filters.test.ts 66
+  domain/time.test.ts 23
+  time formatter definitions: 1
+  literal 1440 occurrences: 1
+  literal 120 (max duration) definitions: 1

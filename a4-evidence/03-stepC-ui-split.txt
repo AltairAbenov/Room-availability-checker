@@ -1,0 +1,31 @@
+
+ RUN  v2.1.9 /home/project
+
+ ✓ src/domain/availability.test.ts (14 tests) 18ms
+ ✓ src/domain/time.test.ts (4 tests) 10ms
+
+ Test Files  2 passed (2)
+      Tests  18 passed (18)
+   Start at  20:32:30
+   Duration  6.23s (transform 160ms, setup 0ms, collect 251ms, tests 29ms, environment 1ms, prepare 2.24s)
+
+
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+
+> vite-react-typescript-starter@0.0.0 build
+> vite build
+
+vite v5.4.8 building for production...
+transforming...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1574 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.05 kB │ gzip:  0.52 kB
+dist/assets/index-_HaI7_-v.css   12.80 kB │ gzip:  3.21 kB
+dist/assets/index-D_jaDvZI.js   153.62 kB │ gzip: 49.24 kB
+✓ built in 9.69s

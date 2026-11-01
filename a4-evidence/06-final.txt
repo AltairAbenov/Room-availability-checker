@@ -1,0 +1,35 @@
+
+ RUN  v2.1.9 /home/project
+
+ ✓ src/domain/time.test.ts (4 tests) 11ms
+ ✓ src/domain/filters.test.ts (9 tests) 19ms
+ ✓ src/domain/availability.test.ts (14 tests) 20ms
+ ✓ src/catalog.integration.test.ts (2 tests) 15ms
+ ✓ src/App.ui.test.tsx (1 test) 373ms
+   ✓ UI: App behaviour (rendered in jsdom) > U-1 filters rooms, clears the result on room switch (F5) and shows the empty state (F4) 371ms
+
+ Test Files  5 passed (5)
+      Tests  30 passed (30)
+   Start at  20:55:56
+   Duration  8.61s (transform 606ms, setup 0ms, collect 1.87s, tests 439ms, environment 1.84s, prepare 6.26s)
+
+
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+
+> vite-react-typescript-starter@0.0.0 build
+> vite build
+
+vite v5.4.8 building for production...
+transforming...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1576 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.05 kB │ gzip:  0.52 kB
+dist/assets/index-C3Fms4ZY.css   14.18 kB │ gzip:  3.49 kB
+dist/assets/index-CcILhWEs.js   157.60 kB │ gzip: 50.27 kB
+✓ built in 9.52s

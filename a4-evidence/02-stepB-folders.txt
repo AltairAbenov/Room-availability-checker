@@ -1,0 +1,15 @@
+
+ RUN  v2.1.9 /home/project
+
+ ✓ src/domain/time.test.ts (4 tests) 8ms
+ ✓ src/domain/availability.test.ts (14 tests) 23ms
+
+ Test Files  2 passed (2)
+      Tests  18 passed (18)
+   Start at  20:23:34
+   Duration  5.76s (transform 186ms, setup 0ms, collect 316ms, tests 31ms, environment 2ms, prepare 2.22s)
+
+
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+

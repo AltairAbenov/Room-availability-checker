@@ -1,0 +1,43 @@
+
+ RUN  v2.1.9 /home/project
+
+ ✓ src/domain/time.test.ts > time helpers (single shared formatter) > T-1 formats minutes after midnight as HH:MM
+ ✓ src/domain/time.test.ts > time helpers (single shared formatter) > T-2 formats the end of the day (1440) as 00:00
+ ✓ src/domain/time.test.ts > time helpers (single shared formatter) > T-3 returns --:-- for values outside 0..1440 or NaN
+ ✓ src/domain/time.test.ts > time helpers (single shared formatter) > T-4 exposes the shared limits
+ ✓ src/catalog.integration.test.ts > Integration: catalog, filtering and availability together > I-1 catalog has at least four rooms, each with id, name, capacity, equipment, blocked flag and bookings
+ ✓ src/catalog.integration.test.ts > Integration: catalog, filtering and availability together > I-2 25 people + projector: only D-404 and B-202 match; switching between them changes the result
+ ✓ src/domain/filters.test.ts > F1: capacity filter > F1-1 keeps a room whose capacity equals the attendees (boundary)
+ ✓ src/domain/filters.test.ts > F1: capacity filter > F1-2 drops a room one seat short (boundary)
+ ✓ src/domain/filters.test.ts > F2: equipment filter > F2-1 keeps a room that has every selected item
+ ✓ src/domain/filters.test.ts > F2: equipment filter > F2-2 drops a room missing one selected item
+ ✓ src/domain/filters.test.ts > F2: equipment filter > F2-3 keeps all rooms with enough seats when no equipment is selected
+ ✓ src/domain/filters.test.ts > F3: blocked room > F3-1 a blocked room can match the filters but is never reported available
+ ✓ src/domain/filters.test.ts > F4: no matching rooms > F4-1 returns an empty list when nothing matches
+ ✓ src/domain/filters.test.ts > F5 / AC5: selected room data > F5-1 the same request gives different results for different rooms (uses each room's own bookings)
+ ✓ src/domain/filters.test.ts > F5 / AC5: selected room data > F5-2 filtering does not change the room list or any bookings
+ ✓ src/domain/availability.test.ts > AC1: invalid interval and past requests > AC1-1 rejects start equal to end
+ ✓ src/domain/availability.test.ts > AC1: invalid interval and past requests > AC1-2 rejects start after end
+ ✓ src/domain/availability.test.ts > AC1: invalid interval and past requests > AC1-3 rejects a request that starts in the past
+ ✓ src/domain/availability.test.ts > AC1: invalid interval and past requests > AC1-4 rejects a request that starts exactly now
+ ✓ src/domain/availability.test.ts > AC2: maximum duration 120 minutes > AC2-1 accepts exactly 120 minutes
+ ✓ src/domain/availability.test.ts > AC2: maximum duration 120 minutes > AC2-2 rejects 121 minutes
+ ✓ src/domain/availability.test.ts > AC3: blocked room > AC3-1 rejects any request for a blocked room
+ ✓ src/domain/availability.test.ts > AC4: overlaps > AC4-1 rejects a request that overlaps an existing booking
+ ✓ src/domain/availability.test.ts > AC4: overlaps > AC4-2 rejects a request that contains an existing booking
+ ✓ src/domain/availability.test.ts > AC4: overlaps > AC4-3 allows a request that starts exactly when a booking ends (BUG-A)
+ ✓ src/domain/availability.test.ts > AC4: overlaps > AC4-4 allows a request that ends exactly when a booking starts (BUG-A)
+ ✓ src/domain/availability.test.ts > AC5: result without changing booking data > AC5-1 returns Available for a free slot
+ ✓ src/domain/availability.test.ts > AC5: result without changing booking data > AC5-2 does not modify the bookings array when the slot is free (BUG-B)
+ ✓ src/domain/availability.test.ts > AC5: result without changing booking data > AC5-3 does not modify the bookings array when the slot is taken (BUG-B)
+ ✓ src/App.ui.test.tsx > UI: App behaviour (rendered in jsdom) > U-1 filters rooms, clears the result on room switch (F5) and shows the empty state (F4) 402ms
+
+ Test Files  5 passed (5)
+      Tests  30 passed (30)
+   Start at  20:54:00
+   Duration  8.64s (transform 654ms, setup 0ms, collect 1.91s, tests 483ms, environment 1.89s, prepare 6.01s)
+
+
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+

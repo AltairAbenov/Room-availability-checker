@@ -1,0 +1,2 @@
+WRITE-OK 2 0 0
+WRITE-OK 1 0 0

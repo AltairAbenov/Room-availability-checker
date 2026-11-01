@@ -1,0 +1,10 @@
+
+ RUN  v2.1.9 /home/project
+
+ ✓ src/availability.test.ts (14 tests | 12 skipped) 16ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 12 skipped (14)
+   Start at  15:45:49
+   Duration  8.69s (transform 233ms, setup 0ms, collect 329ms, tests 16ms, environment 1ms, prepare 1.69s)
+

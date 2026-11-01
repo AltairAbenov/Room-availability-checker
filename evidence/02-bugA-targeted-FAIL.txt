@@ -1,0 +1,54 @@
+
+ RUN  v2.1.9 /home/project
+
+ ❯ src/availability.test.ts (14 tests | 2 failed | 12 skipped) 36ms
+   × AC4: overlaps > AC4-3 allows a request that starts exactly when a booking ends (BUG-A) 29ms
+     → expected false to be true // Object.is equality
+   × AC4: overlaps > AC4-4 allows a request that ends exactly when a booking starts (BUG-A) 3ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/availability.test.ts > AC4: overlaps > AC4-3 allows a request that starts exactly when a booking ends (BUG-A)
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ eval src/availability.test.ts:60:68
+     58|   });
+     59|   it('AC4-3 allows a request that starts exactly when a booking ends (…
+     60|     expect(checkAvailability(makeRoom(), NOW, 660, 720).available).toB…
+       |                                                                    ^
+     61|   });
+     62|   it('AC4-4 allows a request that ends exactly when a booking starts (…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/availability.test.ts > AC4: overlaps > AC4-4 allows a request that ends exactly when a booking starts (BUG-A)
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ eval src/availability.test.ts:63:68
+     61|   });
+     62|   it('AC4-4 allows a request that ends exactly when a booking starts (…
+     63|     expect(checkAvailability(makeRoom(), NOW, 720, 780).available).toB…
+       |                                                                    ^
+     64|   });
+     65| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 12 skipped (14)
+   Start at  15:40:40
+   Duration  8.84s (transform 254ms, setup 0ms, collect 345ms, tests 36ms, environment 1ms, prepare 1.76s)
+
